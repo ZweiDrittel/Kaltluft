@@ -1,0 +1,18 @@
+Programm ermittelt, an wievielen Stunden im Jahr der angegebenen .akterm potentiell Kaltluftabflüsse auftreten können
+
+Hierzu werden beginnend mit der DRITTEN Stunde in ununterbrochener Folge alle Stunden gezählt, die folgene Kriterien erfüllen:
+1: Windgeschwindigkeiten von unter 1,5 m/s
+2: Ausbreitungsklasse I
+Eventuell zu ergänzen um ein Kriterium für die Tages-/Uhrzeit.
+
+WICHTIG! Die Datei "input_kaltluft.txt" muss an der Ort "S:\Datenban\Wetter\Wetter_neu\Kaltluft\" bleiben!
+AUCH WICHTIG! Die .akterm müssen in einem Verzeichnis liegen, deren Pfad keine Leerzeichen enthält.
+Im Zweifelsfall kurzzeitig Kopie in anderem Ordner erstellen.
+
+Vorgehen:
+1) Die Datei "input_kaltluft.txt" öffnen und den Pfad der akterm angeben.
+2) Die Datei speichern.
+3) Das Programm "kaltluft.exe" durch einen Doppelklick starten.
+
+
+Ra, 26.02.2016

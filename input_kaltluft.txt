@@ -1,0 +1,4 @@
+akterm: S:\User\Ra\Luedenscheid2009.akterm
+
+WICHTIG! Die .akterm sollte in einem Verzeichnis liegen, deren Pfad keine Leerzeichen enthält.
+Im Zweifelsfall kurzzeitig Kopie in anderem Ordner erstellen.
