@@ -2,7 +2,7 @@
 //potentiell Kaltluftabflüsse entstehen können
 //Das Kriterium hierfür sieht folgendermaßen aus:
 //Als Situation wird eine Stunde gezählt, wenn
-//AK = 1; v < 1,5 m/s
+//AK = 1; v < 1,5 m/s (kann in get_calms_ak1() angepasst werden -> file_handling.cpp)
 //Weiterhin wird eine Situation erst dann regisitriert, wenn
 //die Kriterien mindestens 2 Stunden vorher bereits erfüllt waren
 
@@ -30,10 +30,7 @@ int main()
     cout << "Potentielle Kaltluftsituationen: " << calms_ak1 << "\n";
     cout << "Prozentualer Anteil an Jahresstunden: " << calms_ak1/8760.0*100.0 << "\%\n";
 
-    do
-    {
-        ;
-    }while(true);
+    scanf("%*c");
 
     return 0;
 }

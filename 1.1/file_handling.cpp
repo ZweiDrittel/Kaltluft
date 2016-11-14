@@ -53,10 +53,17 @@ void get_calms_ak1(std::ifstream &akterm_in, int &counter)
         //Ausbreitungsklasse 1, Windgeschwindigkeitsklasse 1 oder 2
         //Und Windrichtung 270-300°  --->  && (wd >= 270 && wd <= 300)
         //und Nacht (vereinfacht zu Stunden zwischen 20:00 und 7:00)
-        if(ak == 1 && v < 14 && (hour >= 18 || hour <= 6))
+        if(/*ak == 1 && */v < 20 && (
+           (i%7 == 0 && ((hour >= 11 && hour <= 13) || (hour >= 17 && hour <= 22))) || //MONTAG
+           (i%7 == 1 && ((hour >= 11 && hour <= 13) || (hour >= 17 && hour <= 22))) || //DIENSTAG
+           (i%7 == 2 && ((hour >= 11 && hour <= 13) || (hour >= 17 && hour <= 22))) || //MITTWOCH
+           (i%7 == 3 && ((hour >= 11 && hour <= 13) || (hour >= 17 && hour <= 22))) || //DONNERSTAG
+           (i%7 == 4 && ((hour >= 11 && hour <= 13) || (hour >= 17 && hour <= 22))) || //FREITAG
+           (i%7 == 5 && (hour >= 15 && hour <= 22)) || //SAMSTAG
+           (i%7 == 6 && (hour >= 12 && hour <= 22))))  //SONNTAG
         {
 			count_period_length++;
-			if(count_period_length >= 2)
+			if(count_period_length >= 0)
 			{
 				akterm_mod << "AK 10446 ";
 				akterm_mod << std::setw(4) << std::setfill(' ') << year << " ";
